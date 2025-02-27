@@ -1,0 +1,58 @@
+<!-- BLOCK -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Block Examples</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      p,
+      ul {
+        border: 2px solid rebeccapurple;
+        padding: 0.2em;
+      }
+
+      .block,
+      li {
+        border: 2px solid blue;
+        padding: 0.2em;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .block {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      In general, you can set various values for the display type using the
+      display property, which can have various values. If a box has a display
+      value of block, then: 
+      <ol>
+        <li>The box will break onto a new line.</li>
+        <li>The width and height properties are respected.</li>
+        <li>Padding, margin and border will cause other elements to be pushed away from the box.</li>
+        <li>If width is not specified, the box will extend in the inline direction to fill the space available in its container. </li>
+        <li>In most cases, the box will become as wide as its container, filling up 100% of the space available. </li>
+      </ol>
+    </p>
+      Some HTML elements, such as `h1` and `p`, use block as their outer display type by default.
+    </p>
+    <p>I am a paragraph. A short one.</p>
+    <ul>
+      <li>Item One</li>
+      <li>Item Two</li>
+      <li>Item Three</li>
+    </ul>
+    <p>
+      I am another paragraph. Some of the <span class="block">words</span> have
+      been wrapped in a <span>span element</span>.
+    </p>
+  </body>
+</html>

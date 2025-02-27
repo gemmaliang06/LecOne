@@ -10,3 +10,28 @@ Feb 25th Notes
 ---
 Feb 27th Notes
 ----
+## Horizontal Navigation Bar:
+
+### Inline List Items
+```li {
+  display: inline;
+}
+```
+### Floating List Items:
+```li {
+  float: left;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+```
+## CSS Box Model
+- Content box 
+- Padding box
+- Border box
+- Margin box
+
+![alt text](https://camo.githubusercontent.com/d03a536d636130fdfeb9774a1ee1f841bffa04b6ac189f4fc5a31e5f6cd93104/68747470733a2f2f646576656c6f7065722e6d6f7a696c6c612e6f72672f656e2d55532f646f63732f4c6561726e5f7765625f646576656c6f706d656e742f436f72652f5374796c696e675f6261736963732f426f785f6d6f64656c2f626f782d6d6f64656c2e706e67)

@@ -1,0 +1,107 @@
+/* Inline */
+/* ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+} */
+
+/* Floating */
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    padding: 8px;
+    background-color: pink;
+  } */
+
+/* Note: If a !DOCTYPE is not specified, floating items can produce unexpected results.
+
+A background color is added to the links to show the link area. The whole link area is clickable, not just the text.
+
+Note: overflow:hidden is added to the ul element to prevent li elements from going outside of the list. */
+
+/* Full-width background color */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: pink;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+} 
+
+/* A background color is added to the list instead of each link to create a full-width background color.
+
+Note: overflow:hidden is added to the ul element to prevent li elements from going outside of the list. */
+
+/* Color Hover */
+li a:hover {
+  background-color: hotpink;
+} 
+
+/* Active Color */
+ .active {
+  background-color: green;
+} 
+
+/* With borders */
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: navy;
+}
+
+li {
+  float: left;
+  border-right: 2px solid hotpink;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: green;
+}
+
+.active {
+  background-color: pink;
+} */
+
+Fixed Nav Bar 
+ ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} 
