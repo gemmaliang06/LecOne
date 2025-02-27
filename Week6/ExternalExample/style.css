@@ -1,0 +1,16 @@
+
+body {
+    background-color: navy;
+}
+
+h2,
+p {
+    color: pink; 
+    margin-left: 40px; 
+    text-align:center;}
+
+h1 {
+    color:antiquewhite;
+    margin-left: 40px;
+    text-align: center;
+}
