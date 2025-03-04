@@ -1,0 +1,6 @@
+## Favorite Website
+Article: [My Boyfriend Came Back From the War, 1996](https://anthology.rhizome.org/my-boyfriend-came-back-from-the-war)
+
+The 1996 artwork by Olia Lialina, "My Boyfriend Came Back From War" captured my attention through Lialina's interesting exploration of memory, communication and self-preservation. The artist portrays the emotional reunion of a woman and her partner following his return from war - a place where return could be uncertain. Lialina's use of a computer as her canvas, and type as her paintbrush to create animated images of an ambiguous face conveys an interesting narrative of the early internet. 
+
+As the artwork was produced in the 90s, using technology from its period, its meaning has changed through the decades as technology has evolved. The fragmented illustration of the man on the computer comments on the capabilities of our memory. As technology has ginormously evolved since 1996, the answers to Lialina's questioning of memory have changed as memories are now more indestructible through the power of saving files upon files of memories, stories and documentation of our lives. 
