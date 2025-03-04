@@ -1,6 +1,16 @@
-.container {
+
+
+.polaroid {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    gird-template-rows: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    padding: 10px;
+    padding-bottom: 15px;
 
+}
+
+.photo {
+    border-color:black; 
+    border: 5px; 
+    padding:3px;
 }
