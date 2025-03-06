@@ -6,6 +6,8 @@ Based off portfolio websites I have seen, I believe I should include 4 sections:
 
 Since the website is showcasing my artistic skills, it must fit unifyingly with the style of my artworks. I feel that they are very colorful and vibrant for the most part. 
 
+*Currently this is what my portfolio looks like: https://gemmatos12.wixsite.com/gemmaliangportfolio*
+
 ## Inspiration Websites
 1. [Jonathan Chen Portfolio](https://jonnychen.wixsite.com/jonathanchenart)
     - This portfolio showcases the artist's according to the year it was made and (some not all) the series it is apart of
