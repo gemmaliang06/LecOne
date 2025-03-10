@@ -61,6 +61,100 @@ Classes allow you to communicate with a class name within a style sheet
 In the following example we have three ```<div>``` elements with a class attribute with the value of "city". All of the three ```<div>``` elements will be styled equally according to the .city style definition in the head section:
 [Example](http://127.0.0.1:3002/Week7/ClassNotes/Classes.html)
 
+# Image Sizing
+Cover: The image will fit and resize to the box you made
+
+Contain: The image will fit in the box yet will not change its ratio of dimentions
+
+Border property: can be used to make a thumbnail
+- use a border radius
+- you can wrap the border in an anchor to make it a link
+  - to make a link open a new window: ```target="blank"```
+
+  Opacity: to change opacity of an image
+  - create a class
+  ``` 
+  .opacity {
+    opacity: 0.5
+  }
 
 
+  Position of text: can be varied in different classes
 
+  
+  .textCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 20px;
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  font-size: 20px;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 20px;
+}
+
+# Image Styling
+Overlay: could be during a hover effect, the opacity will change
+```
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: black;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+```
+# Transforms and Transitions
+
+### CSS 2D Transforms
+![alt text](2dTransforms.png)
+
+### CSS 3D Transforms
+![alt text](image.png)
+
+### CSS 3D Transitions
+![alt text](image-1.png)
