@@ -10,7 +10,7 @@
   
   /* Header/logo Title */
   .header {
-    padding: 60px;
+    padding: 10px;
     text-align: center;
     background: gold;
     color: black;
@@ -26,27 +26,28 @@
   .navbar a {
     color: white;
     padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
+    text-decoration: none; /* Removes underline from links */
+    text-align: flex-start;
   }
   
   /* Change color on hover */
   .navbar a:hover {
-    background-color: orangered;
-    color: black;
+    background-color: rgb(255, 212, 101);
+    color: goldenrod;
   }
   
   /* Column container */
   .row {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
+  
   }
   
   /* Create two unequal columns that sits next to each other */
   /* Sidebar/left column */
   .side {
-    flex: 30%;
+    flex: 50%;
+    flex-direction: column;
     background-color: #f1f1f1;
     padding: 20px;
   }
