@@ -1,13 +1,13 @@
 body{
-    background-color: turquoise;
+    background-color: lightpink;
 }
 button{
     font-family: Roboto, sans-serif;
     font-size: x-large;
     text-transform: uppercase;
-    border: 2px solid limegreen;
+    border: 2px solid white;
     background-color: pink;
-    color: maroon;
+    color: white;
     box-shadow: 5px 5px 2px;
     cursor: pointer;
 }
@@ -15,5 +15,5 @@ button{
     display: flex;
     text-align: center;
     justify-content: center;
-    height: 200px;
+    height: 20%;
 }
