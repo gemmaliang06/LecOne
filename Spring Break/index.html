@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div class="fixed nav">
+        <div class="fixed_nav">
             <a href="index.html">Home</a>
         </div>
 
@@ -15,6 +15,53 @@
             <p>all things Apple</p>
         </div>
 
-        <
+        <div class="about" id="about">
+            <h2>About Apple</h2>
+            <p>Apple is an American multinational technology company, renowned for 
+                its consumer electronics, software, and services, including the 
+                iPhone, iPad, and Mac computers, and known for its focus on design 
+                and user experience. </p>
+        </div>
+
+        <div class="gallery" id="gallery">
+            <h2>Dunking For Apples</h2>
+      <button
+        onclick="document.getElementById('gallery-container').style.flexDirection='column'"
+      >
+        Apple Column
+      </button>
+      <button
+        onclick="document.getElementById('gallery-container').style.flexDirection='row'"
+      >
+        Apple Row
+      </button>
+
+      
+      <div class="gallery-container" id="gallery-container">
+        <div class="gallery-item" id="gallery-item" onclick="hideImage(this)">
+            <img src="./Apple_Computer_Logo_rainbow.svg.png" />
+        </div>
+        <div class="gallery-item" id="gallery-item" onclick="hideImage(this)">
+            <img src="./Apple_Computer_Logo_rainbow.svg.png" />
+        </div>
+        <div class="gallery-item" id="gallery-item" onclick="hideImage(this)">
+            <img src="./Apple_Computer_Logo_rainbow.svg.png" />
+        </div>
+        <div class="gallery-item" id="gallery-item" onclick="hideImage(this)">
+            <img src="./Apple_Computer_Logo_rainbow.svg.png" />
+        </div>
+        <div class="gallery-item" id="gallery-item" onclick="hideImage(this)">
+            <img src="./Apple_Computer_Logo_rainbow.svg.png" />
+        </div>
+        <div class="gallery-item" id="gallery-item" onclick="hideImage(this)">
+            <img src="./Apple_Computer_Logo_rainbow.svg.png" />
+        </div>
+    </div>
+        </div>
     </body>
+    <script>
+        function hideImage(element) {
+            element.style.display = "none"; // Hide the clicked gallery-item
+        }
+    </script>
 </html>
