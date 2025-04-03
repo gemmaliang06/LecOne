@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Number guessing game</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin:  auto;
+      }
+
+      .choices button{
+        background-color: green;
+        color:white;
+        border-color: green;
+        border-width:10px 10px;
+        border-radius: 5px 5px
+      }
+
+      .choices input[type="choice"] {
+        width: 200px;
+      }
+
+      .scoreboard {
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rock, Paper, Scissors... SHOOT!</h1>
+
+    <div class="result" id="result">Choose Rock, Paper, or Scissors!</div>
+    <br>
+
+    <div class="choices">
+        <button class="choice" id="Rock">Rock</button>
+        <button class="choice" id="Paper">Paper</button>
+        <button class="choice" id="Scissors">Scissors</button>
+    </div>
+
+    <br>
+
+    <button id="reset">Reset Game</button>
+   
+  </body>
+  <script>
+const resultDisplay = document.getElementById("result");
+const resetButton = document.getElementbyId("reset");
+
+document
+.getElementById("Rock")
+.addEventListener("click", () => playGame("Rock"));
+
+document
+.getElementById("Paper")
+.addEventListener("click", () => playGame("Paper"));
+
+document
+.getElementById("Scissors")
+.addEventListener("click", () => playGame("Scissors"));
+
+function playGame (playerChoice){
+const choices = [Rock, Paper, Scissors];
+const computerChoices = choices[Math.floor(Math.random() * 3)];
+
+let result;
+
+if (playerChoice === computerChoice) {
+    result = "You Tied!";
+} else if (
+    playerChoice === "Rock" && computerChoice === "Scissors" ||
+    playerChoice === "Paper" && computerChoice === "Rock" ||
+    playerChoice === "Scissors" && computerChoice === "Paper"
+) {
+result = "Congratulations! You Win!";
+} else {
+    result = "BOOO You Lost!";
+}
+
+}
+
+  </script>
+
+
+
+</html>
