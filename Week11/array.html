@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Practise</title>
+
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <h1>Groceries List</h1>
+        <div id="title"></div>
+            <div id="groceries"><i>Here is where your groceries will appear</i></div>
+
+            <div id="numberOfItems"></div>
+            <div id="randomItem"></div>
+
+
+        <script>
+            const groceries = ["milk", "cereal", "cookies", "chicken", "tomato sauce", "pasta"];
+            
+     
+            document.getElementById("groceries").innerHTML = groceries;
+            document.getElementById("groceries").innerHTML += "<br>" ;
+            document.getElementById("numberOfItems").innerHTML = "You have " + groceries.length + " items in your groceries list.";
+            document.getElementById("randomItem").innerHTML = "Random item: " + groceries[Math.floor(Math.random() * groceries.length)];
+
+            
+
+        </script>
+    </body>
+</html>
