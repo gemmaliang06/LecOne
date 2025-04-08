@@ -10,11 +10,16 @@
                 font-family:Arial, Helvetica, sans-serif;
             }
 
+            p {
+                font-size: 20px;
+
+            }
+
             button {
               background-color: #aa0404;
               border: none;
               color: white;
-              padding: 15px 32px;
+              padding: 15px 25px;
               text-align: center;
               text-decoration: none;
               display: inline-block;
@@ -22,25 +27,74 @@
               margin: 4px 2px;
               cursor: pointer;
             }
+
+            label {
+              font-size: 20px;
+         
+            }
       
             button:hover {
               background-color: #45a049;
             }
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+            }
+            .inputs input{
+              width: 200px;
+              height: 15px;
+            }
+
           </style>
     </head>
     <body>
         <h1>Week 10 Homework</h1>
-        <br>
+        
 
         <h2>Task 1: Hello World</h2>
-        <button id="alertButton">Click me for alert</button>
+        <button id="alertButton"><a>Click me for alert</a></button>
         <p id="output">unmodifed text</p>
+        <br>
 
         <h2>Task 2: Variable Practise</h2>
         <p>Look at console for a message using variables!</p>
+        <label for="favNum">Enter your favourite number</label>
+        <input type="number" id="favNum" placeholder="ex. 25">
+
+        <br>
         
         <h2>Task 3: Calculator Function</h2>
-        
+        <label for="num1">Enter first number:</label>
+        <input type="number" id="num1" placeholder="First number">
+        <br>
+        <label for="num2">Enter second number:</label>
+        <input type="number" id="num2" placeholder="Second number">
+        <br>
+      <div class="functions">
+        <button id="add">+</button>
+        <button id="subtract">-</button>
+        <button id="multiply">x</button>
+        <button id="divide">/</button>
+      </div>
+
+      <div id="resultValue"></div>
+
+        <br>
+
+        <h2>Task 4: Temperature Controller</h2>
+        <label for="C">Temperature in Celsius:</label>
+        <input type="number" id="C" placeholder="ex. 25">
+<br>
+        <label for="F">Temperature in Fahrenheit:</label>
+        <input type="number" id="F" placeholder="ex. 25">
+
+        <div id="tempResult"></div>
+
+        <br>
+
+        <h2>Task 5: String Manipulation</h2>
+
 
     <script src="main.js"></script>
     </body>
