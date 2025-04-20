@@ -24,8 +24,13 @@ https://webflow.com/made-in-webflow/website/vibrand-css-button-hover-styles
 * Eye Quirky https://www.dafont.com/eye-quirky.font 
 
 ## HTML/CSS/JS Skills You Plan to Use
-
+- buttons - with js animation and transforamtions
+- classes - for artworks, titles, dimentions and descriptions
+- user input forms - contact page
+- gallery + flex properties
+- create js objects 
 
 
 
 ## Wireframe or Sitemap
+![alt text](IMG_0889.JPG)
