@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Animations</title>
+  </head>
+  <body>
+    <style>
+        #cw {
+  position: fixed;
+  z-index: -1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0 0 0 / 5%);
+}
+    </style>
+    <canvas id="cw"
+  >Animation creating multi-colored disappearing stream of light that follow the
+  cursor as it moves over the image
+</canvas>
+
+    <script>
+     // Grab the canvas element from the HTML
+const canvas = document.getElementById("cw");
+// Get the 2D drawing context so we can draw shapes, lines, etc.
+const context = canvas.getContext("2d");
+// Set the global alpha (transparency) for all drawings
+context.globalAlpha = 0.5;
+
+// Track the current position of the cursor
+const cursor = {
+  x: innerWidth / 2, // Start in the center of the screen
+  y: innerHeight / 2,
+};
+
+// Array that will hold all the particle objects
+let particlesArray = [];
+
+// Create 101 particles and initialize canvas size and animation
+generateParticles(101);
+setSize();
+anim();
+
+// Update cursor position on mouse move
+addEventListener("mousemove", (e) => {
+  cursor.x = e.clientX;
+  cursor.y = e.clientY;
+});
+
+// Update cursor position on touch screens
+addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault(); // Stop page from scrolling
+    cursor.x = e.touches[0].clientX;
+    cursor.y = e.touches[0].clientY;
+  },
+  { passive: false } // Needed so preventDefault works on touch events
+);
+
+// When the browser is resized, update the canvas size
+addEventListener("resize", () => setSize());
+
+// Function to create a given number of particles
+function generateParticles(amount) {
+  for (let i = 0; i < amount; i++) {
+    particlesArray[i] = new Particle(
+      innerWidth / 2, // Start in the middle
+      innerHeight / 2,
+      4, // Line width
+      generateColor(), // Random stroke color
+      0.02 // Speed of rotation
+    );
+  }
+}
+
+// Function to generate a random hex color like "#A1B2C3"
+function generateColor() {
+  let hexSet = "0123456789ABCDEF";
+  let finalHexString = "#";
+  for (let i = 0; i < 6; i++) {
+    finalHexString += hexSet[Math.ceil(Math.random() * 15)];
+  }
+  return finalHexString;
+}
+
+// Function to resize the canvas to full window size
+function setSize() {
+  canvas.height = innerHeight;
+  canvas.width = innerWidth;
+}
+
+// Constructor function for creating a particle
+function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
+  this.x = x;
+  this.y = y;
+  this.particleTrailWidth = particleTrailWidth;
+  this.strokeColor = strokeColor;
+  this.theta = Math.random() * Math.PI * 2; // Random start angle
+  this.rotateSpeed = rotateSpeed;
+  this.t = Math.random() * 150; // Distance from cursor
+
+  // Method that updates the position and draws the trail
+  this.rotate = () => {
+    const ls = { x: this.x, y: this.y }; // Last position
+    this.theta += this.rotateSpeed; // Spin around the center
+
+    // Calculate new position using polar coordinates
+    this.x = cursor.x + Math.cos(this.theta) * this.t;
+    this.y = cursor.y + Math.sin(this.theta) * this.t;
+
+    // Draw a line from the last position to the new position
+    context.beginPath();
+    context.lineWidth = this.particleTrailWidth;
+    context.strokeStyle = this.strokeColor;
+    context.moveTo(ls.x, ls.y);
+    context.lineTo(this.x, this.y);
+    context.stroke();
+  };
+}
+
+// Main animation loop
+function anim() {
+  requestAnimationFrame(anim); // Keep the loop going
+
+  // Create a fading effect by drawing a transparent rectangle over the canvas
+  context.fillStyle = "rgb(0 0 0 / 5%)";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Update and draw each particle
+  particlesArray.forEach((particle) => particle.rotate());
+}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            <div>
+              <label for="fname">First name: </label>
+              <input id="fname" type="text" />
+            </div>
+            <div>
+              <label for="lname">Last name: </label>
+              <input id="lname" type="text" />
+            </div>
+            <div>
+              <input id="submit" type="submit" />
+            </div>
+          </form>
+          <p></p>
+
+        <div id="container">
+        <button>Change Colour</button>
+    </div>
+    <pre id="output"></pre>
+
+        <h1 id="text"></h1>
+        <script>
+const form = document.querySelector("form");
+const fname = document.getElementById("fname");
+const lname = document.getElementById("lname");
+const para = document.querySelector("p");
+
+form.addEventListener("submit", (e) => {
+  if (fname.value === "" || lname.value === "") {
+    e.preventDefault();
+    para.textContent = "You need to fill in both names!";
+  }
+});
+
+const output = document.querySelector("#output");
+function handleClick(e) {
+  output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+}
+
+const container = document.querySelector("#container");
+container.addEventListener("click", handleClick);
+
+
+const btn = document.querySelector("button");
+
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+function changeColour () {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    e.target.style.backgroundColor = rndCol;
+    console.log(e);
+    }
+
+function writeText() {
+document.getElementById("text").innerHTML = ("COLOURS COLOURS COLOURS");
+}
+
+btn.addEventListener("click", changeColour, writeText);
+
+        </script>
+    </body>
+</html>

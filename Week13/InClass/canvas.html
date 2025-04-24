@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Canvas tutorial</title>
+    <style>
+      /* canvas {
+        border: 1px solid black;
+      } */
+    </style>
+  </head>
+  <body>
+    <canvas id="tutorial" width="300" height="150"></canvas>
+    <script>
+      function draw() {
+        const canvas = document.getElementById("tutorial");
+        for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 6; j++) {
+      ctx.fillStyle = `rgb(${Math.floor(255 - 42.5 * i)} ${Math.floor(
+        255 - 42.5 * j
+      )} 0)`;
+      ctx.fillRect(j * 25, i * 25, 25, 25);
+
+      
+    }
+  }
+}
+
+      draw();
+    //   window.addEventListener("load", draw);
+    </script>
+  </body>
+</html>
