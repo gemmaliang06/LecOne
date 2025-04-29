@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+}
+
+.btn-seven::before {
+    content: '';
+    background: blue;
+    -webkit-clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+    clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+    transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), -webkit-clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), background 0.5s ease;
+  }
+  
+  .btn-seven::after {
+    content: '';
+    height: 86%;
+    width: 97%;
+    top: 5%;
+    border-radius: 58% 42% 55% 45% / 56% 45% 55% 44%;
+    border: 1px solid white;
+    transform: rotate(-20deg);
+    z-index: -1;
+    transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+  }
+  
+  
+  .btn::before, .btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .btn-seven::after {
+    content: '';
+    height: 86%;
+    width: 97%;
+    top: 5%;
+    border-radius: 58% 42% 55% 45% / 56% 45% 55% 44%;
+    border: 1px solid white;
+    transform: rotate(-20deg);
+    z-index: -1;
+    transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+  }
+  
+  .btn::before, .btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
